@@ -1,22 +1,34 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
 /**
- * main - generates random number and displays whether number
- * is positive, zero, or negative
- * Return: 0
+ *main- last digits of numbers
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int n;
+int n, last_digit;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	if (n > 0)
-		printf("%i is positive\n", n);
-	else if (n == 0)
-		printf("%i is zero\n", n);
-	else
-		printf("%i is negative\n", n);
-	return (0);
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+
+last_digit = n % 10;
+
+if (last_digit > 5)
+{
+printf("Last digit of %d is %d and is greater than 5\n", n, last_digit);
+}
+else if (last_digit == 0)
+{
+printf("Last digit of %d is %d and is 0\n", n, last_digit);
+}
+else if (last_digit < 6 && last_digit != 0)
+{
+printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last_digit);
+}
+
+return (0);
 }
