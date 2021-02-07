@@ -1,22 +1,28 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
+
+#define MAX 10
+#define MIN 0
+#define SEPARATOR '0'
+
 /**
- * main - main block Entry
+ * main - all possible combinations for single digit numbers
  *
- * Return: 0
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-int i, j, k;
-for (i = 0; i < 100; i++)
+int digit;
+
+for (digit = MIN ; digit < MAX ; digit++)
 {
-j = i / 10;
-k = i % 10;
-putchar(j + '0');
-putchar(k + '0');
-if (i < 99)
+putchar(digit + SEPARATOR);
+if (digit != (MAX - 1))
 {
-putchar(44);
-putchar(32);
+putchar(',');
+putchar(' ');
 }
 }
 putchar('\n');
