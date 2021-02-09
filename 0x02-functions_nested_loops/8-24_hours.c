@@ -67,6 +67,7 @@ _putchar('\n');
 }
 }
 }
+
 #include "holberton.h"
 
 /**
