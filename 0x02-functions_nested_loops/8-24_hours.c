@@ -32,7 +32,8 @@ _putchar('\n');
 }
 }
 }
-}#include "holberton.h"
+}
+#include "holberton.h"
 
 /**
  *jack_bauer - Prints every minute of the day
