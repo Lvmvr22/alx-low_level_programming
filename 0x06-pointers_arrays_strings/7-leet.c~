@@ -1,0 +1,28 @@
+#include "holberton.h"
+/**
+ *leet - encodes a string into 1337
+ *@str: string pointer
+ *
+ *Return: encoded character string
+ */
+
+char *leet(char *str)
+{
+	int l;
+	int n;
+	char small[] = "aeotl";
+	char big[] = "AEOTL";
+	char re[] = "43071";
+
+	for (l = 0; str[l] != '\0'; l++)
+	{
+		for (n = 0; small[n] != '\0' && big[n] != '\0'; n++)
+		{
+			if (str[l] == small[n] || str[l] == big[n])
+			{
+				str[l] = rep[n];
+			}
+		}
+	}
+	return (str)
+		}

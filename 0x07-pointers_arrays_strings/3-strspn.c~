@@ -1,0 +1,25 @@
+#include "holberton.h"
+
+/**
+ *_strspn: gets the length of a prefix subtring
+ *@l: first parameter
+ *@accept: second parameter
+ *Description: checks in that order
+ *Return :(0) success
+ */
+unsigned int _strspn(char *l, char *accept)
+{
+	unsigned int i, n;
+
+	for (i = 0; l[i]; i++)
+	{
+		for (n = 0; accept[n]; n++)
+		{
+			if (accept[n] == l[i])
+				break;
+		}
+		if (!accept[n])
+			break;
+	}
+	return (i);
+}

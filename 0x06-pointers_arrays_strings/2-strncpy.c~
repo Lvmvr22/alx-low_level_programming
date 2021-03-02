@@ -1,0 +1,31 @@
+#include "holberton.h"
+
+/**
+ *_strncpy -concatenates two strings
+ *@dest: destination pointer
+ *@src: source pointer string 
+ *@n: string size
+ *Return: returns a concatenated string
+ *
+ */
+
+
+char *_strncpy(char *dest, char *src, int n)
+{
+	int wamzy;
+
+	wamzy = 0
+		while (src[wamzy] != '\0' && wamzy < n)
+		{
+			dest[wamzy] = src[wamzy];
+			wamzy++;
+		}
+
+	while (wamzy < n)
+	{
+		dest[wamzy] = '\0';
+		wamzy++;
+	}
+
+	return (dest);
+}
